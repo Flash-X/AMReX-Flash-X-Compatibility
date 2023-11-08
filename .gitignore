@@ -1,0 +1,5 @@
+__pycache__
+config.sh
+software/amrex/AMReX
+software/flashx/Flash-X
+software/bittree/Bittree

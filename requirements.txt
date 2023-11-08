@@ -1,0 +1,3 @@
+click
+pyjobrunner
+git+ssh://git@github.com/Flash-X/Flash-X-Test.git@main
