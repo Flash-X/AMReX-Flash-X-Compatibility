@@ -3,7 +3,7 @@
 import click
 
 
-def removeBaseline(line, baseKey):
+def __removeBaseline(line, baseKey):
     try:
         baseIndex = line.split().index(baseKey)
     except:
@@ -15,8 +15,12 @@ def removeBaseline(line, baseKey):
     return line
 
 
-def isValidLine(line):
-    return line[0] != "#" and line[0] != "\n"
+def __continuationLines(fin):
+    for line in fin:
+        line = line.rstrip("\n")
+        while line.endswith("\\"):
+            line = line[:-1] + next(fin).rstrip("\n")
+        yield line
 
 
 @click.group("suite-cmd")
@@ -28,39 +32,31 @@ def suite_cmd():
 @click.argument("suitefile", required=True)
 def remove_benchmarks(suitefile):
 
+    origLines = []
+
     with open(suitefile, "r") as sfile:
-        origLines = sfile.readlines()
+        for line in __continuationLines(sfile):
+            origLines.append(line + "\n")
 
     newLines = []
-    continuedLine = ""
 
     for index, line in enumerate(origLines):
 
-        if index > 0:
-            prevLine = origLines[index - 1]
-            if prevLine[0] != "#" and prevLine[0] != "\n":
-                if prevLine.split("#")[0].split("\\")[0] == prevLine:
-                    continuedLine = ""
-                else:
-                    continuedLine = continuedLine + prevLine
-            else:
-                continuedLine = ""
-
-        evalLine = continuedLine + line
-        evalLine = evalLine.replace("\n", "").replace("\\", "")
-
         if line[0] != "#" and line[0] != "\n":
-            if "Comparison" in evalLine:
-                line = removeBaseline(line, "-cbase")
-            if "Composite" in evalLine:
-                line = removeBaseline(line, "-cbase")
-                line = removeBaseline(line, "-rbase")
+            if "Comparison" in line:
+                line = __removeBaseline(line, "-cbase")
+            if "Composite" in line:
+                line = __removeBaseline(line, "-cbase")
+                line = __removeBaseline(line, "-rbase")
 
         newLines.append(line)
 
     if newLines != origLines:
         with open(suitefile, "w") as sfile:
             sfile.writelines(newLines)
+        print(f"[suite-cmd] {suitefile} CHANGED")
+    else:
+        print(f"[suite-cmd] {suitefile} UNCHANGED")
 
 
 @suite_cmd.command("add-cbase")
@@ -89,12 +85,15 @@ def add_cbase(suitefile, date):
     if newLines != origLines:
         with open(suitefile, "w") as sfile:
             sfile.writelines(newLines)
+        print(f"[suite-cmd] {suitefile} CHANGED")
+    else:
+        print(f"[suite-cmd] {suitefile} UNCHANGED")
 
 
 @suite_cmd.command("add-rbase")
 @click.argument("suitefile", required=True)
 @click.argument("date", required=True)
-def rdd_cbase(suitefile, date):
+def add_rbase(suitefile, date):
 
     with open(suitefile, "r") as sfile:
         origLines = sfile.readlines()
@@ -116,6 +115,9 @@ def rdd_cbase(suitefile, date):
     if newLines != origLines:
         with open(suitefile, "w") as sfile:
             sfile.writelines(newLines)
+        print(f"[suite-cmd] {suitefile} CHANGED")
+    else:
+        print(f"[suite-cmd] {suitefile} UNCHANGED")
 
 
 if __name__ == "__main__":
