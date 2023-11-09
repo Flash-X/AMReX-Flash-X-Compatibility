@@ -10,4 +10,4 @@ flashxtest init -z $FLASHX_HOME \
 	-a $FLASHTEST_LOCAL_ARCHIVE -mpi=mpirun -make="make -j"
 
 # Initialiaze Flash-X test suite
-flashxtest setup-suite --overwrite Tests.suite
+flashxtest setup-suite --overwrite $SiteHome/Tests.suite

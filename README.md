@@ -2,15 +2,25 @@
 
 1. `pip3 install -r requitements.txt`
 
-2. Create a new directory under `sites` similar to `sites/sedona` and 
+2. Create a new directory `sites/<your-site>` similar to `sites/sedona` and 
    customize your `environment.sh` and `Makefile.h`
+
+3. Copy `sites/sedona/Tests.suite` to `sites/<your-site>/Tests.suite`
+
+4. Run `sites/suite-cmd sites/<your-site>/Tests.suite`. This command will remove benchmarks from another site
 
 3. `./configure -s <your-site-name>`
 
-4. `./run_compatibility_tests`
+4. `./run-compatibility-tests`
 
-Initial test runs will fail and the baselines will have to be set manually following instructions here:
+5. Initial test runs will fail and the baselines will have to be set manually.
 
-https://github.com/Flash-X/Flash-X-Test/tree/main/FlashXTest/example
+6. Run `sites/suite-cmd add-cbase <yyyy-mm-dd>`.
 
-To set benchmarks `-cbase <yyyy-mm-dd> -rbase <yyyy-mm-dd>` to your first and second run.
+7. `./run-compatibility-tests` again.
+
+8. Run `sites/suite-cmd add-rbase <yyyy-mm-dd>`.
+
+9. `./run-compatibility-tests`
+
+SUCCESSS 
