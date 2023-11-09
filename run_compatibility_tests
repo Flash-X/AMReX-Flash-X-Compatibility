@@ -5,7 +5,7 @@ import jobrunner.api as jobrunner
 if __name__ == "__main__":
 
     software = ["software/bittree", "software/amrex", "software/flashx"]
-    tests = ["test"]
+    tests = ["tests"]
 
     jobrunner.setup(software, verbose=True)
     jobrunner.clean(tests)
