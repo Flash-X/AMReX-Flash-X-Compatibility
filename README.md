@@ -13,4 +13,4 @@ Initial test runs will fail and the baselines will have to be set manually follo
 
 https://github.com/Flash-X/Flash-X-Test/tree/main/FlashXTest/example
 
-To set benchmarks.
+To set benchmarks `-cbase <yyyy-mm-dd> -rbase <yyyy-mm-dd>` to your first and second run.
