@@ -1,4 +1,4 @@
-## Compatability Testing Environment for Flash-X + AMReX
+## Compatibility Testing Environment for Flash-X + AMReX
 
 1. `pip3 install -r requitements.txt`
 
