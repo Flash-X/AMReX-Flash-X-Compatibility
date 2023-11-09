@@ -16,6 +16,5 @@ export HDF5_HOME=$(which h5pfc | sed s/'\/bin\/h5pfc'//)
 export FLASHXTEST_PATH=$(which flashxtest | sed s/'\/flashxtest'//)
 
 # set path to FLASHXTEST_MAIN_ARCHIVE and FLASHXTEST_LOCAL_ARCHIVE
-# export FLASHXTEST_MAIN_ARCHVE=<path-to-main-archive>
-# export FLASHXTEST_LOCAL_ARCHIVE=<path-to-local-archive>
+# The following module load command sets these variables implicitly
 module load flashxtest

@@ -3,7 +3,7 @@
 import jobrunner.api as jobrunner
 
 if __name__ == "__main__":
-    jobrunner.setup(
-        ["software/bittree", "software/amrex", "software/flashx", "tests"], verbose=True
-    )
+    jobrunner.setup(["software/bittree", "software/amrex", "software/flashx"], verbose=True)
+    jobrunner.clean(["tests"])
+    jobrunner.setup(["tests"], verbose=True)
     jobrunner.submit(["tests"], verbose=True)
