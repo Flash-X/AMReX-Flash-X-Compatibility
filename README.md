@@ -19,8 +19,8 @@
 
 7. `./run-compatibility-tests` again.
 
-8. Run `flashxtest add-rbase <yyyy-mm-dd>`.
+8. Run `flashxtest add-rbase <yyyy-mm-dd>_2`.
 
 9. `./run-compatibility-tests`
 
-SUCCESSS 
+SUCCESS 
