@@ -10,11 +10,12 @@
 #----------------------------------------------------------------------------
 # Set the AMReX library path -- manual installation for multiple variants
 #----------------------------------------------------------------------------
-ifeq ("$(USEOPENMP)","1")
-  AMREX_PATH=${FLASHX_AMREX_OMP${NDIM}D_DIR}
-else
-  AMREX_PATH=${FLASHX_AMREX${NDIM}D_DIR}
-endif
+#ifeq ("$(USEOPENMP)","1")
+#  AMREX_PATH=${FLASHX_AMREX_OMP${NDIM}D_DIR}
+#else
+#  AMREX_PATH=${FLASHX_AMREX${NDIM}D_DIR}
+#endif
+AMREX_PATH=$(AMREX$(NDIM)D_HOME)
 
 MILHOJA_PATH=${FLASHX_MILHOJA${NDIM}D_DIR}
 
