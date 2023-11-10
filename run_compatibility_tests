@@ -1,5 +1,5 @@
 #!/bin/bash
-jobrunner setup software/bittree software/amrex software/flashx
+jobrunner setup software/bittree software/amrex software/flashx --verbose
 jobrunner clean tests
-jobrunner setup tests
-jobrunner submit tests
+jobrunner setup tests --verbose
+jobrunner submit tests --verbose
