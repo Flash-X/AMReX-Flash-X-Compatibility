@@ -1,13 +1,5 @@
-#!/usr/bin/env python3
-
-import jobrunner.api as jobrunner
-
-if __name__ == "__main__":
-
-    software = ["software/bittree", "software/amrex", "software/flashx"]
-    tests = ["tests"]
-
-    jobrunner.setup(software, verbose=True)
-    jobrunner.clean(tests)
-    jobrunner.setup(tests, verbose=True)
-    jobrunner.submit(tests, verbose=True)
+#!/bin/bash
+jobrunner setup software/bittree software/amrex software/flashx
+jobrunner clean tests
+jobrunner setup tests
+jobrunner submit tests
