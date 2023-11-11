@@ -50,6 +50,10 @@ if ! [ $FLASHTEST_LOCAL_ARCHIVE ]; then
 	export FLASHTEST_LOCAL_ARCHIVE="$PROJECT_HOME/tests/LocalArchive"
 fi
 
+if ! [ $FLASHTEST_OUTPUT_DIR ]; then
+	export FLASHTEST_OUTPUT_DIR="$PROJECT_HOME/tests/TestResults"
+fi
+
 export PATH=$FLASHXTEST_PATH:$PATH
 
 # Output information to stdout
