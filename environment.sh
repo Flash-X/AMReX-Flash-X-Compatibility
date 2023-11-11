@@ -13,22 +13,21 @@ source $SiteHome/environment.sh
 
 # Check if path to parallel HDF5 installation exists
 if ! [ $HDF5_HOME ]; then
-    echo "HDF5_HOME not set"
-    exit 1
+	echo "HDF5_HOME not set"
+	exit 1
 fi
 
 # Check if path to MPI installation exists
 if ! [ $MPI_HOME ]; then
-    echo "MPI_HOME not set"
-    exit 1
+	echo "MPI_HOME not set"
+	exit 1
 fi
 
 # Check if path to MPI installation exists
 if ! [ $FLASHXTEST_PATH ]; then
-    echo "FLASHXTEST_PATH not set"
-    exit 1
+	echo "FLASHXTEST_PATH not set"
+	exit 1
 fi
-
 
 # Store path to bittree
 export BITTREE_2D_HOME="$PROJECT_HOME/software/bittree/Bittree/install-$SiteName/2D"
@@ -52,6 +51,10 @@ fi
 
 if ! [ $FLASHTEST_OUTPUT_DIR ]; then
 	export FLASHTEST_OUTPUT_DIR="$PROJECT_HOME/tests/TestResults"
+fi
+
+if ! [ $FLASHTEST_VIEW_ARCHIVE ]; then
+	export FLASHTEST_VIEW_ARCHIVE="$PROJECT_HOME/tests/ViewArchive"
 fi
 
 export PATH=$FLASHXTEST_PATH:$PATH
