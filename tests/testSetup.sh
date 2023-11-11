@@ -6,7 +6,6 @@ ln -sf $SiteHome/Makefile.h $FLASHX_HOME/sites/$TestSiteName/Makefile.h
 
 # Check it test output directory is in working directory, otherwise perform a symbolic link
 if [ $FLASHTEST_OUTPUT_DIR != "$PROJECT_HOME/tests/TestResults" ]; then
-        mkdir -pv $FLASHTEST_OUTPUT_DIR
 	mkdir -pv $PROJECT_HOME/tests/TestResults
 	ln -s $FLASHTEST_OUTPUT_DIR $PROJECT_HOME/tests/TestResults
 fi
