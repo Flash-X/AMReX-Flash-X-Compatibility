@@ -13,4 +13,4 @@ python -m venv $WORKSPACE/pyenv
 source $WORKSPACE/pyenv/bin/activate
 pip install wheel
 pip install git+https://github.com/Flash-X/Flash-X-Test.git@main
-pip install git+https://github.com/Lab-Notebooks/Jobrunner.git@main
+pip install git+https://github.com/Lab-Notebooks/Jobrunner.git@development
