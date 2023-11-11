@@ -6,7 +6,13 @@ if [ -d "AMReX" ]; then
 fi
 
 # Clone a fresh copy for building and testing
-git clone git@github.com:AMReX-Codes/amrex --branch development AMReX && cd AMReX
+if [[ $GitConnection == "SSH" ]]; then
+	git clone git@github.com:AMReX-Codes/amrex --branch development AMReX && cd AMReX
+elif [[ $GitConnection == "HTTPS" ]]; then
+	git clone https://github.com/AMReX-Codes/amrex.git --branch development AMReX && cd AMReX
+else
+	exit 1
+fi
 
 # configure and install amrex in 2D
 make clean || true

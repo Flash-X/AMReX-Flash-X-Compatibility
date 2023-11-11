@@ -5,18 +5,26 @@ import click
 
 @click.command(name="configure")
 @click.option("--site", "-s", type=str, help="Site Directory")
-def configure(site):
+@click.option("--git", "-git", type=str, default="SSH", help="Gir connection time")
+def configure(site, git):
     """
     \b
     Configuration command to generate config.sh
     from user defined values
     """
+    if git not in ["SSH", "HTTPS", "ssh", "https"]:
+        raise ValueError(
+            'Option --git/-git should contain one of following values: ["SSH", "HTTPS", "ssh", "https"]'
+        )
+
     print("Generating configuration file")
 
     with open("config.sh", "w") as config_file:
 
         config_file.write("# This file is generated using configuration script\n")
         config_file.write(f'SiteName="{site}"\n')
+        config_file.write(f'GitConnection="{git.upper()}"\n')
+
 
 if __name__ == "__main__":
     configure()

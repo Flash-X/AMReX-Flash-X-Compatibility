@@ -6,7 +6,13 @@ if [ -d "Bittree" ]; then
 fi
 
 # Clone a fresh copy for building and testing
-git clone git@github.com:Flash-X/Bittree.git --branch main && cd Bittree
+if [[ $GitConnection == "SSH" ]]; then
+	git clone git@github.com:Flash-X/Bittree.git --branch main && cd Bittree
+elif [[ $GitConnection == "HTTPS" ]]; then
+	git clone https://github.com/Flash-X/Bittree.git --branch main Bittree && cd Bittree
+else
+	exit 1
+fi
 
 # configure and install
 python3 setup.py library --dim 2 --prefix $BITTREE_2D_HOME
