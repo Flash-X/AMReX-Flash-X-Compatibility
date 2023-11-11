@@ -1,12 +1,7 @@
 #!/bin/bash
 
 # Jobrunner commands
-jobrunner setup software/bittree software/amrex software/flashx --verbose
+jobrunner setup software/bittree software/amrex software/flashx --verbose --exit-on-failure
 jobrunner clean tests
-jobrunner setup tests --verbose
-
-# Run flashxtest
-source config.sh
-source enviornment.sh
-cd tests
-flashxtest run-suite --archive
+jobrunner setup tests --verbose --exit-on-failure
+jobrunner submit tests --verbose --exit-on-failure
