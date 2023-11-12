@@ -5,7 +5,7 @@ TestSiteName=amrex.flashx && mkdir -pv $FLASHX_HOME/sites/$TestSiteName
 ln -sf $SiteHome/Makefile.h $FLASHX_HOME/sites/$TestSiteName/Makefile.h
 
 # Initialize config and execfile
-flashxtest init -z $FLASH_HOME -s $TestSiteName \
+flashxtest init -z $FLASHX_HOME -s $TestSiteName \
 	-mpi=mpirun -make="make -j" $FLASHXTEST_OPTS
 
 # Initialiaze Flash-X test suite
