@@ -40,23 +40,6 @@ export AMREX3D_HOME="$PROJECT_HOME/software/amrex/AMReX/install-$SiteName/3D"
 # Path to Flash-X
 export FLASHX_HOME="$PROJECT_HOME/software/flashx/Flash-X"
 
-# Flash-X test archive paths
-if ! [ $FLASHTEST_MAIN_ARCHIVE ]; then
-	export FLASHTEST_MAIN_ARCHIVE="$PROJECT_HOME/tests/MainArchive"
-fi
-
-if ! [ $FLASHTEST_LOCAL_ARCHIVE ]; then
-	export FLASHTEST_LOCAL_ARCHIVE="$PROJECT_HOME/tests/LocalArchive"
-fi
-
-if ! [ $FLASHTEST_OUTPUT_DIR ]; then
-	export FLASHTEST_OUTPUT_DIR="$PROJECT_HOME/tests/TestResults"
-fi
-
-if ! [ $FLASHTEST_VIEW_ARCHIVE ]; then
-	export FLASHTEST_VIEW_ARCHIVE="$PROJECT_HOME/tests/ViewArchive"
-fi
-
 export PATH=$FLASHXTEST_PATH:$PATH
 
 # Output information to stdout
@@ -72,10 +55,7 @@ echo "AMREX2D_HOME=$AMREX2D_HOME"
 echo "AMREX3D_HOME=$AMREX3D_HOME"
 echo "BITTREE_2D_HOME=$BITTREE_2D_HOME"
 echo "BITTREE_3D_HOME=$BITTREE_3D_HOME"
-echo "FLASHTEST_MAIN_ARCHIVE=$FLASHTEST_MAIN_ARCHIVE"
-echo "FLASHTEST_LOCAL_ARCHIVE=$FLASHTEST_LOCAL_ARCHIVE"
-echo "FLASHTEST_OUTPUT_DIR=$FLASHXTEST_OUTPUT_DIR"
-echo "FLASHTEST_VIEW_ARCHIVE=$FLASHTEST_VIEW_ARCHIVE"
+echo "FLASHXTEST_OPTS=$FLASHXTEST_OPTS"
 echo "FLASHXTEST_PATH=$FLASHXTEST_PATH"
 echo "PATH=$PATH"
 echo "---------------------------------------------------------------------------------------"

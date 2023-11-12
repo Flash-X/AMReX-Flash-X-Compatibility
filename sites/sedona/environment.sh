@@ -15,6 +15,10 @@ export HDF5_HOME=$(which h5pfc | sed s/'\/bin\/h5pfc'//)
 # Path to flashxtest
 export FLASHXTEST_PATH=$(which flashxtest | sed s/'\/flashxtest'//)
 
-# set path to FLASHXTEST_MAIN_ARCHIVE and FLASHXTEST_LOCAL_ARCHIVE
-# here to a location outside the repository, otherwise default values
-# will be set in <ROOT>/environment.sh
+# Set flashxtest options
+# -o <output-dir> 
+# -a <local-archive> 
+# -m <main-archive> 
+# -vv <view-archive>"
+# blank value mean use default
+export FLASHXTEST_OPTS=""
