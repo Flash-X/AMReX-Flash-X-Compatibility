@@ -30,10 +30,12 @@ if ! [ $FLASHXTEST_PATH ]; then
 fi
 
 # Store path to bittree
+export BITTREE_1D_HOME="$PROJECT_HOME/software/bittree/Bittree/install-$SiteName/1D"
 export BITTREE_2D_HOME="$PROJECT_HOME/software/bittree/Bittree/install-$SiteName/2D"
 export BITTREE_3D_HOME="$PROJECT_HOME/software/bittree/Bittree/install-$SiteName/3D"
 
 # Store path to amrex as environment variable
+export AMREX1D_HOME="$PROJECT_HOME/software/amrex/AMReX/install-$SiteName/1D"
 export AMREX2D_HOME="$PROJECT_HOME/software/amrex/AMReX/install-$SiteName/2D"
 export AMREX3D_HOME="$PROJECT_HOME/software/amrex/AMReX/install-$SiteName/3D"
 
@@ -51,11 +53,12 @@ echo "SITE_HOME=$SiteHome"
 echo "MPI_HOME=$MPI_HOME"
 echo "HDF5_HOME=$HDF5_HOME"
 echo "FLASHX_HOME=$FLASHX_HOME"
+echo "AMREX1D_HOME=$AMREX1D_HOME"
 echo "AMREX2D_HOME=$AMREX2D_HOME"
 echo "AMREX3D_HOME=$AMREX3D_HOME"
+echo "BITTREE_1D_HOME=$BITTREE_1D_HOME"
 echo "BITTREE_2D_HOME=$BITTREE_2D_HOME"
 echo "BITTREE_3D_HOME=$BITTREE_3D_HOME"
-echo "FLASHXTEST_OPTS=$FLASHXTEST_OPTS"
 echo "FLASHXTEST_PATH=$FLASHXTEST_PATH"
 echo "PATH=$PATH"
 echo "---------------------------------------------------------------------------------------"

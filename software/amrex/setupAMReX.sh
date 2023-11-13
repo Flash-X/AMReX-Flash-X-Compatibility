@@ -14,6 +14,13 @@ else
 	exit 1
 fi
 
+# configure and install amrex in 1D
+make clean || true
+BITTREE_HOME=$BITTREE_1D_HOME
+./configure --dim=1 --prefix=$AMREX1D_HOME --enable-bittree=no --enable-tiny-profile=yes --debug=no
+make -j
+make install
+
 # configure and install amrex in 2D
 make clean || true
 BITTREE_HOME=$BITTREE_2D_HOME

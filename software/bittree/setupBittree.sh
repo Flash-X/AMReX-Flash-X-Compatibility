@@ -15,6 +15,9 @@ else
 fi
 
 # configure and install
+python3 setup.py library --dim 1 --prefix $BITTREE_1D_HOME
+cd build && make && make install && cd ..
+
 python3 setup.py library --dim 2 --prefix $BITTREE_2D_HOME
 cd build && make && make install && cd ..
 

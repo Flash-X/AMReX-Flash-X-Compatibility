@@ -1,28 +1,28 @@
 # AMReX Test Suite for Flash-X
-Sod -t "Composite/Sod/PseudoUG/2d/AMReX/simpleUnsplit" -np 4
-Sod -t "Composite/Sod/PseudoUG/2d/AMReX/unsplit" -np 4
-Sod -t "Composite/Sod/PseudoUG/2d/AMReX/spark" -np 4
-Sod -t "Composite/Sod/PseudoUG/2d/AMReX/sparkPIO" -np 4
-Sod -t "Composite/Sod/AMR/2d/AMReX/simpleUnsplit" -np 1
-Sod -t "Composite/Sod/AMR/2d/AMReX/unsplit" -np 2
+Sod -t "Composite/Sod/PseudoUG/2d/AMReX/simpleUnsplit" -np 4 -cbase 2023-11-12_5
+Sod -t "Composite/Sod/PseudoUG/2d/AMReX/unsplit" -np 4 -cbase 2023-11-12_5
+Sod -t "Composite/Sod/PseudoUG/2d/AMReX/spark" -np 4 -cbase 2023-11-12_5
+Sod -t "Composite/Sod/PseudoUG/2d/AMReX/sparkPIO" -np 4 -cbase 2023-11-12_5
+Sod -t "Composite/Sod/AMR/2d/AMReX/simpleUnsplit" -np 1 -cbase 2023-11-12_5
+Sod -t "Composite/Sod/AMR/2d/AMReX/unsplit" -np 2 -cbase 2023-11-12_5
 
-Sedov -t "Composite/Sedov/PseudoUG/2d/AMReX/simpleUnsplit" -np 4
-Sedov -t "Composite/Sedov/PseudoUG/2d/AMReX/unsplit" -np 4
-Sedov -t "Composite/Sedov/PseudoUG/2d/AMReX/spark" -np 4
-Sedov -t "Composite/Sedov/PseudoUG/3d/AMReX/unsplit" -np 8
-Sedov -t "Composite/Sedov/PseudoUG/2dCyl/AMReX/unsplit" -np 8
-Sedov -t "Composite/Sedov/AMR/2d/AMReX/simpleUnsplit" -np 1
-Sedov -t "Composite/Sedov/AMR/2d/AMReX/unsplit" -np 2
-Sedov -t "Composite/Sedov/AMR/2d/AMReX/spark" -np 4
-Sedov -t "Composite/Sedov/AMR/3d/AMReX/unsplit" -np 8
-Sedov -t "Composite/Sedov/AMR/2dCyl/AMReX/unsplit" -np 8
-Sedov -t "Composite/Sedov/AMR/3d/AMReX/unsplitPIO" -np 8
+Sedov -t "Composite/Sedov/PseudoUG/2d/AMReX/simpleUnsplit" -np 4 -cbase 2023-11-12_5
+Sedov -t "Composite/Sedov/PseudoUG/2d/AMReX/unsplit" -np 4 -cbase 2023-11-12_5
+Sedov -t "Composite/Sedov/PseudoUG/2d/AMReX/spark" -np 4 -cbase 2023-11-12_5
+Sedov -t "Composite/Sedov/PseudoUG/3d/AMReX/unsplit" -np 8 -cbase 2023-11-12_5
+Sedov -t "Composite/Sedov/PseudoUG/2dCyl/AMReX/unsplit" -np 8 -cbase 2023-11-12_5
+Sedov -t "Composite/Sedov/AMR/2d/AMReX/simpleUnsplit" -np 1 -cbase 2023-11-12_5
+Sedov -t "Composite/Sedov/AMR/2d/AMReX/unsplit" -np 2 -cbase 2023-11-12_5
+Sedov -t "Composite/Sedov/AMR/2d/AMReX/spark" -np 4 -cbase 2023-11-12_5
+Sedov -t "Composite/Sedov/AMR/3d/AMReX/unsplit" -np 8 -cbase 2023-11-12_5
+Sedov -t "Composite/Sedov/AMR/2dCyl/AMReX/unsplit" -np 8 -cbase 2023-11-12_5
+Sedov -t "Composite/Sedov/AMR/3d/AMReX/unsplitPIO" -np 8 -cbase 2023-11-12_5
 
 DustCollapse -t "Comparison/DustCollapse/AMR/1dSph/AMReX" -np 2
-DustCollapse -t "Comparison/DustCollapse/AMR/2dCyl/AMReX" -np 4
+DustCollapse -t "Comparison/DustCollapse/AMR/2dCyl/AMReX" -np 4 -cbase 2023-11-12_5
 
-IsentropicVortex -t "Composite/IsentropicVortex/PseudoUG/2d/AMReX/unsplit" -np 4
-IsentropicVortex -t "Composite/IsentropicVortex/PseudoUG/2d/AMReX/spark" -np 4
+IsentropicVortex -t "Composite/IsentropicVortex/PseudoUG/2d/AMReX/unsplit" -np 4 -cbase 2023-11-12_5
+IsentropicVortex -t "Composite/IsentropicVortex/PseudoUG/2d/AMReX/spark" -np 4 -cbase 2023-11-12_5
 
 # Grid unit tests
 unitTest/Eos/Helmholtz -t "UnitTest/Eos/helmholtz/3d/AMReX" -np 1
