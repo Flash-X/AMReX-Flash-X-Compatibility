@@ -21,4 +21,5 @@ export FLASHXTEST_PATH=$(which flashxtest | sed s/'\/flashxtest'//)
 # -m <main-archive> 
 # -vv <view-archive>"
 # blank value mean use default
-export FLASHXTEST_OPTS=""
+export FLASHXTEST_SETUP_OPTS=""
+export FLASHXTEST_RUN_OPTS=""
