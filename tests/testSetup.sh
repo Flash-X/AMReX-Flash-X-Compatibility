@@ -1,5 +1,5 @@
 # Initialiaze Flash-X testing environment by first creating a temprorary site in the Flash-X site folder
-TestSiteName=amrex.flashx && mkdir -pv $FLASHX_HOME/sites/$TestSiteName
+TestSiteName=$FLASHXTEST_SITENAME && mkdir -pv $FLASHX_HOME/sites/$TestSiteName
 
 # Link makefiles to use the makefile from current site directory
 ln -sf $SiteHome/Makefile.h $FLASHX_HOME/sites/$TestSiteName/Makefile.h

@@ -24,6 +24,8 @@ export HDF5_HOME=$(which h5pfc | sed s/'\/bin\/h5pfc'//)
 # Path to flashxtest
 export FLASHXTEST_PATH=$(which flashxtest | sed s/'\/flashxtest'//)
 
+export FLASHXTEST_SITENAME="gce"
+
 # Set path to local and main archive for Flash-X-Test
 export FLASHXTEST_SETUP_OPTS="-a $FLASHX_PROJECT_PATH/FlashXTestArchive/localArchive/amrex_gcc \
                         -m $FLASHX_PROJECT_PATH/FlashXTestArchive/mainArchive/staged_gcc \
