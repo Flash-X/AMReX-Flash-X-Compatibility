@@ -1,21 +1,31 @@
-# File containing details of test specifications for
-# specific simulations that reference keys defined in
-# tests/tests.toml files defined in the simulation
-# directories
-#
-# Comments can be added using a `#` sign and individual
-# tests spec can be defined with relevant options as shown below
-#
-# List of options
-# --test, -t 		Desired test key/node from tests/tests.toml
-# --nprocs, -np		Number of MPI procs to be used
-# --env, -e		Environment variables, can be supplied multiple times
-# --debug, -debug	Flag to run test in debug
-# --cbase, -cbase 	Date string YYYY-MM-DD[_version]
-# --rbase, -rbase 	Date string YYYY-MM-DD[_version]
-# --tolerance, -tol	Tolerance for SFOCU
+# AMReX Test Suite for Flash-X
+Sod -t "Composite/Sod/PseudoUG/2d/AMReX/simpleUnsplit" -np 4
+Sod -t "Composite/Sod/PseudoUG/2d/AMReX/unsplit" -np 4
+Sod -t "Composite/Sod/PseudoUG/2d/AMReX/spark" -np 4
+Sod -t "Composite/Sod/PseudoUG/2d/AMReX/sparkPIO" -np 4
+Sod -t "Composite/Sod/AMR/2d/AMReX/simpleUnsplit" -np 1
+Sod -t "Composite/Sod/AMR/2d/AMReX/unsplit" -np 2
+
+Sedov -t "Composite/Sedov/PseudoUG/2d/AMReX/simpleUnsplit" -np 4
+Sedov -t "Composite/Sedov/PseudoUG/2d/AMReX/unsplit" -np 4
+Sedov -t "Composite/Sedov/PseudoUG/2d/AMReX/spark" -np 4
+Sedov -t "Composite/Sedov/PseudoUG/3d/AMReX/unsplit" -np 8
+Sedov -t "Composite/Sedov/PseudoUG/2dCyl/AMReX/unsplit" -np 8
+Sedov -t "Composite/Sedov/AMR/2d/AMReX/simpleUnsplit" -np 1
+Sedov -t "Composite/Sedov/AMR/2d/AMReX/unsplit" -np 2
+Sedov -t "Composite/Sedov/AMR/2d/AMReX/spark" -np 4
+Sedov -t "Composite/Sedov/AMR/3d/AMReX/unsplit" -np 8
+Sedov -t "Composite/Sedov/AMR/2dCyl/AMReX/unsplit" -np 8
+Sedov -t "Composite/Sedov/AMR/3d/AMReX/unsplitPIO" -np 8
+
+DustCollapse -t "Comparison/DustCollapse/AMR/1dSph/AMReX" -np 2
+DustCollapse -t "Comparison/DustCollapse/AMR/2dCyl/AMReX" -np 4
+
+IsentropicVortex -t "Composite/IsentropicVortex/PseudoUG/2d/AMReX/unsplit" -np 4
+IsentropicVortex -t "Composite/IsentropicVortex/PseudoUG/2d/AMReX/spark" -np 4
 
 # Grid unit tests
+unitTest/Eos/Helmholtz -t "UnitTest/Eos/helmholtz/3d/AMReX" -np 1
 unitTest/Grid/Amrex/TestInit -t "UnitTest/Grid/AMR/AMReX/2d/Init" -np 1
 unitTest/Grid/Amrex/TestRefine -t "UnitTest/Grid/AMR/AMReX/2d/Refine" -np 1
 unitTest/Grid/Amrex/TestFluxCorrection -t "UnitTest/Grid/AMR/AMReX/2d/FluxCorrection" -np 1
@@ -24,8 +34,12 @@ unitTest/Grid/Amrex/TestCyl2d -t "UnitTest/Grid/AMR/AMReX/2d/TestCyl" -np 1
 unitTest/Grid/DomainBBoxRadians -t "UnitTest/Grid/AMReX/3dcyl/DomainBBoxRadians"
 unitTest/Grid/AnomalousRefine -t "UnitTest/GridAnomalousRefine/2d/AMReX" -np 3
 
-# Poisson solver tests
+# Poisson unit tests
 unitTest/Poisson/Amrex -t "UnitTest/Multigrid/AMReX/3d" -np 1
+
+# Gravity unit tests
+unitTest/Gravity/PointMass -t "UnitTest/PointMassGravity/3d/AMReX" -np 3
+unitTest/Gravity/PointMass -t "UnitTest/PointMassGravity/2dCyl/AMReX" -np 2
 
 # Incompressible Navier-Stokes tests
 incompFlow/ChannelFlow -t "UnitTest/incompFlow/ChanneFlow/2d/Periodic" -np 4
