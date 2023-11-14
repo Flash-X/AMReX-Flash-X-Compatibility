@@ -41,3 +41,12 @@ Steps described below only pertain to setting up an AMReX + Flash-X testsuite to
 SUCCESS
 
 Now you can run this testsuite anytime you would like to check comptability of AMReX version with Flash-X
+
+## Note on various Python tools used
+
+This execution environment uses Flash-X-Test to perform testing for Flash-X source code. And the orgnization of the notebook is implemented using Jobrunner (https://github.com/Lab-Notebooks/Jobrunner).
+
+If you are interested in learning more about the tools we recommend reading our papers here:
+
+- https://arxiv.org/pdf/2308.16180.pdf
+- https://arxiv.org/pdf/2308.15637.pdf
