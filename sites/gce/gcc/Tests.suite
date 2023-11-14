@@ -1,39 +1,31 @@
 # AMReX Test Suite for Flash-X
-Sod -t "Composite/Sod/PseudoUG/2d/AMReX/simpleUnsplit" -np 4 -cbase 2023-01-18 -rbase 2023-01-19
-Sod -t "Composite/Sod/PseudoUG/2d/AMReX/unsplit" -np 4 -cbase 2023-01-18 -rbase 2023-01-19
-Sod -t "Composite/Sod/PseudoUG/2d/AMReX/spark" -np 4 -cbase 2023-01-18 -rbase 2023-01-19
-Sod -t "Composite/Sod/PseudoUG/2d/AMReX/sparkPIO" -np 4 -cbase 2023-01-18 -rbase 2023-01-19
-Sod -t "Composite/Sod/AMR/2d/AMReX/simpleUnsplit" -np 1 -cbase 2023-01-18 -rbase 2023-01-19
-Sod -t "Composite/Sod/AMR/2d/AMReX/unsplit" -np 2 -cbase 2023-01-18 -rbase 2023-01-19
+Sod -t "Composite/Sod/PseudoUG/2d/AMReX/simpleUnsplit" -np 4 -cbase 2023-11-12_5 -rbase 2023-11-13
+Sod -t "Composite/Sod/PseudoUG/2d/AMReX/unsplit" -np 4 -cbase 2023-11-12_5 -rbase 2023-11-13
+Sod -t "Composite/Sod/PseudoUG/2d/AMReX/spark" -np 4 -cbase 2023-11-12_5 -rbase 2023-11-13
+Sod -t "Composite/Sod/PseudoUG/2d/AMReX/sparkPIO" -np 4 -cbase 2023-11-12_5 -rbase 2023-11-13
+Sod -t "Composite/Sod/AMR/2d/AMReX/simpleUnsplit" -np 1 -cbase 2023-11-12_5 -rbase 2023-11-13
+Sod -t "Composite/Sod/AMR/2d/AMReX/unsplit" -np 2 -cbase 2023-11-12_5 -rbase 2023-11-13
 
-Sedov -t "Composite/Sedov/PseudoUG/2d/AMReX/simpleUnsplit" -np 4 -cbase 2023-01-18 -rbase 2023-01-19
-Sedov -t "Composite/Sedov/PseudoUG/2d/AMReX/unsplit" -np 4 -cbase 2023-01-18 -rbase 2023-01-19
-Sedov -t "Composite/Sedov/PseudoUG/2d/AMReX/spark" -np 4 -cbase 2023-01-18 -rbase 2023-01-19
-Sedov -t "Composite/Sedov/PseudoUG/3d/AMReX/unsplit" -np 8 -cbase 2023-01-18 -rbase 2023-01-19
-Sedov -t "Composite/Sedov/PseudoUG/2dCyl/AMReX/unsplit" -np 8 -cbase 2023-01-18 -rbase 2023-01-19
-Sedov -t "Composite/Sedov/AMR/2d/AMReX/simpleUnsplit" -np 1 -cbase 2023-01-18 -rbase 2023-01-19
-Sedov -t "Composite/Sedov/AMR/2d/AMReX/unsplit" -np 2 -cbase 2023-01-18 -rbase 2023-01-19
-Sedov -t "Composite/Sedov/AMR/2d/AMReX/spark" -np 4 -cbase 2023-04-12 -rbase 2023-04-16
-Sedov -t "Composite/Sedov/AMR/3d/AMReX/unsplit" -np 8 -cbase 2023-01-18 -rbase 2023-01-19
-Sedov -t "Composite/Sedov/AMR/2dCyl/AMReX/unsplit" -np 8 -cbase 2023-04-12 -rbase 2023-04-16
+Sedov -t "Composite/Sedov/PseudoUG/2d/AMReX/simpleUnsplit" -np 4 -cbase 2023-11-12_5 -rbase 2023-11-13
+Sedov -t "Composite/Sedov/PseudoUG/2d/AMReX/unsplit" -np 4 -cbase 2023-11-12_5 -rbase 2023-11-13
+Sedov -t "Composite/Sedov/PseudoUG/2d/AMReX/spark" -np 4 -cbase 2023-11-12_5 -rbase 2023-11-13
+Sedov -t "Composite/Sedov/PseudoUG/3d/AMReX/unsplit" -np 8 -cbase 2023-11-12_5 -rbase 2023-11-13
+Sedov -t "Composite/Sedov/PseudoUG/2dCyl/AMReX/unsplit" -np 8 -cbase 2023-11-12_5 -rbase 2023-11-13
+Sedov -t "Composite/Sedov/AMR/2d/AMReX/simpleUnsplit" -np 1 -cbase 2023-11-12_5 -rbase 2023-11-13
+Sedov -t "Composite/Sedov/AMR/2d/AMReX/unsplit" -np 2 -cbase 2023-11-12_5 -rbase 2023-11-13
+Sedov -t "Composite/Sedov/AMR/2d/AMReX/spark" -np 4 -cbase 2023-11-12_5 -rbase 2023-11-13
+Sedov -t "Composite/Sedov/AMR/3d/AMReX/unsplit" -np 8 -cbase 2023-11-12_5 -rbase 2023-11-13
+Sedov -t "Composite/Sedov/AMR/2dCyl/AMReX/unsplit" -np 8 -cbase 2023-11-12_5 -rbase 2023-11-13
+Sedov -t "Composite/Sedov/AMR/3d/AMReX/unsplitPIO" -np 8 -cbase 2023-11-12_5 -rbase 2023-11-13
 
-#------------------------------------------------
-# Tests for - DustCollapse
-#------------------------------------------------
-DustCollapse -t "Comparison/DustCollapse/AMR/1dSph/AMReX" -np 2 -cbase 2023-04-12
-DustCollapse -t "Comparison/DustCollapse/AMR/2dCyl/AMReX" -np 4 -cbase 2023-04-12
+DustCollapse -t "Comparison/DustCollapse/AMR/1dSph/AMReX" -np 2 -cbase 2023-11-13
+DustCollapse -t "Comparison/DustCollapse/AMR/2dCyl/AMReX" -np 4 -cbase 2023-11-12_5
 
-#------------------------------------------------
-# Tests for - IsentropicVortex
-#------------------------------------------------
-IsentropicVortex -t "Composite/IsentropicVortex/PseudoUG/2d/AMReX/unsplit" -np 4 -cbase 2023-04-12 -rbase 2023-04-16
-IsentropicVortex -t "Composite/IsentropicVortex/PseudoUG/2d/AMReX/spark" -np 4 -cbase 2023-04-12 -rbase 2023-04-16
+IsentropicVortex -t "Composite/IsentropicVortex/PseudoUG/2d/AMReX/unsplit" -np 4 -cbase 2023-11-12_5 -rbase 2023-11-13
+IsentropicVortex -t "Composite/IsentropicVortex/PseudoUG/2d/AMReX/spark" -np 4 -cbase 2023-11-12_5 -rbase 2023-11-13
 
+# Grid unit tests
 unitTest/Eos/Helmholtz -t "UnitTest/Eos/helmholtz/3d/AMReX" -np 1
-
-#------------------------------------------------
-# Tests for - Grid
-#------------------------------------------------
 unitTest/Grid/Amrex/TestInit -t "UnitTest/Grid/AMR/AMReX/2d/Init" -np 1
 unitTest/Grid/Amrex/TestRefine -t "UnitTest/Grid/AMR/AMReX/2d/Refine" -np 1
 unitTest/Grid/Amrex/TestFluxCorrection -t "UnitTest/Grid/AMR/AMReX/2d/FluxCorrection" -np 1
@@ -42,24 +34,18 @@ unitTest/Grid/Amrex/TestCyl2d -t "UnitTest/Grid/AMR/AMReX/2d/TestCyl" -np 1
 unitTest/Grid/DomainBBoxRadians -t "UnitTest/Grid/AMReX/3dcyl/DomainBBoxRadians"
 unitTest/Grid/AnomalousRefine -t "UnitTest/GridAnomalousRefine/2d/AMReX" -np 3
 
-#------------------------------------------------
-# Tests for - Poisson solver
-#------------------------------------------------
+# Poisson unit tests
 unitTest/Poisson/Amrex -t "UnitTest/Multigrid/AMReX/3d" -np 1
 
-#------------------------------------------------
-# Tests for - constant Gravity
-#------------------------------------------------
+# Gravity unit tests
 unitTest/Gravity/PointMass -t "UnitTest/PointMassGravity/3d/AMReX" -np 3
 unitTest/Gravity/PointMass -t "UnitTest/PointMassGravity/2dCyl/AMReX" -np 2
 
-#------------------------------------------------
-# Tests for - incompFlow
-#------------------------------------------------
-incompFlow/RisingBubble -t "UnitTest/RisingBubble/AMReX/2d" -np 2
-incompFlow/LidDrivenCavity -t "UnitTest/LidDrivenCavity/AMReX/2d" -np 4
-incompFlow/ChannelFlow -t "Comparison/incompFlow/ChanneFlow/AMReX/2d" -np 4 -cbase 2023-11-10
-incompFlow/RisingBubble -t "Comparison/RisingBubble/AMReX/2d" -np 3 -cbase 2023-11-10
-incompFlow/PoolBoiling -t "Comparison/incompFlow/PoolBoiling/2d/AMReX" -np 4 -cbase 2023-11-10
+# Incompressible Navier-Stokes tests
+incompFlow/ChannelFlow -t "UnitTest/incompFlow/ChanneFlow/2d/Periodic" -np 4
+incompFlow/ChannelFlow -t "Comparison/incompFlow/ChanneFlow/AMReX/2d" -np 4 -cbase 2023-11-12
+incompFlow/RisingBubble -t "UnitTest/RisingBubble/AMReX/2d" -np 3
+incompFlow/RisingBubble -t "Comparison/RisingBubble/AMReX/2d" -np 3 -cbase 2023-11-12
+incompFlow/RisingBubble -t "Comparison/RisingBubble/AMReXGCFill/2d" -np 3 -cbase 2023-11-12
 incompFlow/DeformingBubble -t "Composite/DeformingBubble/2d/AMReX" -np 4 -cbase 2023-11-12 -rbase 2023-11-12_2
-incompFlow/RisingBubble -t "Comparison/RisingBubble/AMReXGCFill/2d" -np 3 -cbase 2023-11-10
+incompFlow/PoolBoiling -t "Comparison/incompFlow/PoolBoiling/2d/AMReX" -np 4 -cbase 2023-11-12

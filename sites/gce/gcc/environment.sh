@@ -28,8 +28,8 @@ export FLASHXTEST_SITENAME="gce"
 
 # Set path to local and main archive for Flash-X-Test
 export FLASHXTEST_SETUP_OPTS="-a $FLASHX_PROJECT_PATH/FlashXTestArchive/localArchive/amrex_gcc \
-                        -m $FLASHX_PROJECT_PATH/FlashXTestArchive/mainArchive/staged_gcc \
+                        -m $FLASHX_PROJECT_PATH/FlashXTestArchive/mainArchive/amrex_gcc \
                         -o $FLASHX_PROJECT_PATH/flashTestRuns/amrex_gcc \
                         -vv /nfs/pub_html/gce/projects/FLASH5/output/amrex_gcc"
 
-export FLASHXTEST_RUN_OPTS="--skip-mainarchive"
+export FLASHXTEST_RUN_OPTS=""
