@@ -17,20 +17,20 @@ fi
 # configure and install amrex in 1D
 make clean || true
 BITTREE_HOME=$BITTREE_1D_HOME
-./configure --dim=1 --prefix=$AMREX1D_HOME --enable-bittree=no --with-omp-offload=yes
+./configure --dim=1 --prefix=$AMREX1D_HOME --enable-bittree=no --with-omp-offload=no
 make -j
 make install
 
 # configure and install amrex in 2D
 make clean || true
 BITTREE_HOME=$BITTREE_2D_HOME
-./configure --dim=2 --prefix=$AMREX2D_HOME --enable-bittree=no --with-omp-offload=yes
+./configure --dim=2 --prefix=$AMREX2D_HOME --enable-bittree=no --with-omp-offload=no
 make -j
 make install
 
 # configure and install amrex in 3D
 make clean || true
 BITTREE_HOME=$BITTREE_3D_HOME
-./configure --dim=3 --prefix=$AMREX3D_HOME --enable-bittree=no --with-omp-offload=yes
+./configure --dim=3 --prefix=$AMREX3D_HOME --enable-bittree=no --with-omp-offload=no
 make -j
 make install

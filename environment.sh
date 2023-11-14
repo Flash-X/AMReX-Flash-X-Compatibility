@@ -42,8 +42,6 @@ export AMREX3D_HOME="$PROJECT_HOME/software/amrex/AMReX/install-$SiteName/3D"
 # Path to Flash-X
 export FLASHX_HOME="$PROJECT_HOME/software/flashx/Flash-X"
 
-export PATH=$FLASHXTEST_PATH:$PATH
-
 # Output information to stdout
 echo "---------------------------------------------------------------------------------------"
 echo "Execution Environment:"
@@ -60,5 +58,4 @@ echo "BITTREE_1D_HOME=$BITTREE_1D_HOME"
 echo "BITTREE_2D_HOME=$BITTREE_2D_HOME"
 echo "BITTREE_3D_HOME=$BITTREE_3D_HOME"
 echo "FLASHXTEST_PATH=$FLASHXTEST_PATH"
-echo "PATH=$PATH"
 echo "---------------------------------------------------------------------------------------"
