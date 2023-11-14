@@ -21,6 +21,7 @@ export FLASHXTEST_PATH=$(which flashxtest | sed s/'\/flashxtest'//)
 # -m <main-archive> 
 # -vv <view-archive>"
 # blank value mean use default
-export FLASHXTEST_SITENAME="sedona"
-export FLASHXTEST_SETUP_OPTS=""
+module load flashxtest
+export FLASHXTEST_SITENAME="multiphase.simulations"
+export FLASHXTEST_SETUP_OPTS="-a $FLASHTEST_LOCAL_ARCHIVE -m $FLASHTEST_MAIN_ARCHIVE"
 export FLASHXTEST_RUN_OPTS=""
