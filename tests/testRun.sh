@@ -6,4 +6,4 @@ cd $PROJECT_HOME/software/amrex/AMReX && echo AMReX HEAD is at $(git rev-parse -
 cd $PROJECT_HOME/software/bittree/Bittree && echo Bittree HEAD is at $(git rev-parse --short HEAD)
 
 # Run Flash-X test suite
-cd $NodeDir && flashxtest run-suite --archive $FLASHXTEST_RUN_OPTS
+cd $NodeDir && flashxtest run-suite $FLASHXTEST_RUN_OPTS
