@@ -7,9 +7,9 @@ fi
 
 # Clone a fresh copy for building and testing
 if [[ $GitConnection == "SSH" ]]; then
-	git clone git@github.com:AMReX-Codes/amrex --branch development AMReX && cd AMReX
+	git clone git@github.com:AMReX-Codes/amrex --branch $AMReXBranch AMReX && cd AMReX
 elif [[ $GitConnection == "HTTPS" ]]; then
-	git clone https://github.com/AMReX-Codes/amrex.git --branch development AMReX && cd AMReX
+	git clone https://github.com/AMReX-Codes/amrex.git --branch $AMReXBranch AMReX && cd AMReX
 else
 	exit 1
 fi

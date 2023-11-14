@@ -5,8 +5,9 @@ import click
 
 @click.command(name="configure")
 @click.option("--site", "-s", type=str, help="Site Directory")
-@click.option("--git", "-git", type=str, default="SSH", help="Gir connection time")
-def configure(site, git):
+@click.option("--git", "-git", type=str, default="SSH", help="Git connection type")
+@click.option("--amrex", "-amrex", type=str, default="development", help="AMReX branch/tag")
+def configure(site, git, amrex):
     """
     \b
     Configuration command to generate config.sh
@@ -24,6 +25,7 @@ def configure(site, git):
         config_file.write("# This file is generated using configuration script\n")
         config_file.write(f'SiteName="{site}"\n')
         config_file.write(f'GitConnection="{git.upper()}"\n')
+        config_file.write(f'AMReXBranch="{amrex}"\n')
 
 
 if __name__ == "__main__":
