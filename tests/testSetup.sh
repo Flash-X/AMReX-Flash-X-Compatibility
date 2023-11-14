@@ -5,7 +5,7 @@ mkdir -pv $FLASHX_HOME/sites/$FLASHXTEST_SITENAME
 ln -sf $SiteHome/Makefile.h $FLASHX_HOME/sites/$FLASHXTEST_SITENAME/Makefile.h
 
 # Initialize config and execfile
-flashxtest init -z $FLASHX_HOME -s $FLASHXTEST_SITENAME $FLASHXTEST_SETUP_OPTS
+flashxtest init -z $FLASHX_HOME -s $FLASHXTEST_SITENAME -make "make -j" $FLASHXTEST_SETUP_OPTS
 
 # Initialiaze Flash-X test suite
 flashxtest setup-suite --overwrite $SiteHome/Tests.suite

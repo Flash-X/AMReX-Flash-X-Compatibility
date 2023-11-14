@@ -23,5 +23,5 @@ export FLASHXTEST_PATH=$(which flashxtest | sed s/'\/flashxtest'//)
 # blank value mean use default
 module load flashxtest
 export FLASHXTEST_SITENAME="multiphase.simulations"
-export FLASHXTEST_SETUP_OPTS='-a $FLASHTEST_LOCAL_ARCHIVE -m $FLASHTEST_MAIN_ARCHIVE -mpi=mpirun -make="make -j"'
+export FLASHXTEST_SETUP_OPTS="-a $FLASHTEST_LOCAL_ARCHIVE -m $FLASHTEST_MAIN_ARCHIVE -mpi mpirun"
 export FLASHXTEST_RUN_OPTS="--archive"
