@@ -13,7 +13,10 @@ Sedov -t "Composite/Sedov/PseudoUG/3d/AMReX/unsplit" -np 8 -cbase 2023-11-12_5 -
 Sedov -t "Composite/Sedov/PseudoUG/2dCyl/AMReX/unsplit" -np 8 -cbase 2023-11-12_5 -rbase 2023-11-14_2
 Sedov -t "Composite/Sedov/AMR/2d/AMReX/simpleUnsplit" -np 1 -cbase 2023-11-12_5 -rbase 2023-11-14_2
 Sedov -t "Composite/Sedov/AMR/2d/AMReX/unsplit" -np 2 -cbase 2023-11-12_5 -rbase 2023-11-14_2
-Sedov -t "Composite/Sedov/AMR/2d/AMReX/spark" -np 4 -cbase 2023-11-12_5 -rbase 2023-11-14_2
+
+# adhruv (2023-11-25) Adding new benchmarks after verifying change in new results
+Sedov -t "Composite/Sedov/AMR/2d/AMReX/spark" -np 4 -cbase 2023-11-25
+
 Sedov -t "Composite/Sedov/AMR/3d/AMReX/unsplit" -np 8 -cbase 2023-11-12_5 -rbase 2023-11-14_2
 Sedov -t "Composite/Sedov/AMR/2dCyl/AMReX/unsplit" -np 8 -cbase 2023-11-12_5 -rbase 2023-11-14_2
 Sedov -t "Composite/Sedov/AMR/3d/AMReX/unsplitPIO" -np 8 -cbase 2023-11-12_5 -rbase 2023-11-14_2
